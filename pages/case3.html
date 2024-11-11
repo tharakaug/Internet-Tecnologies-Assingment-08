@@ -90,7 +90,7 @@
           $(".light").eq(current_light).css("background", "red");
           $(".light")
             .eq(current_light - 1)
-            .css("background", "pink");
+            .css("background", "#ff6f6f");
 
           if (current_light == light_count - 1) {
             direction = "LEFT";
@@ -101,7 +101,7 @@
           $(".light").eq(current_light).css("background", "red");
           $(".light")
             .eq(current_light + 1)
-            .css("background", "pink");
+            .css("background", "#ff6f6f");
 
           if (current_light === 0) {
             direction = "RIGHT";
@@ -110,6 +110,7 @@
       };
 
       $("#btn01").on("click", function () {
+        clearInterval(intervalId);
         intervalId = setInterval(updateLight, 100);
       });
 
